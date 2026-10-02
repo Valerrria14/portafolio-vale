@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Valeria Valle Huansi</title>
+    <style>
+        :root {
+            --bg-color: #fff5f7; /* Rosa pastel muy suave de fondo */
+            --text-color: #3d3a3e; /* Gris oscuro para excelente legibilidad */
+            --accent-color: #d4af37; /* Dorado metálico elegante */
+            --card-bg: #ffffff; /* Blanco puro para las tarjetas */
+            --tag-bg: #ffe4e9; /* Rosa pastel para los tags */
+            --title-color: #2c252b; /* Color casi negro para títulos principales */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #ffe4e9 0%, #ffccd5 100%);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+        }
+        h1 {
+            color: var(--title-color);
+            margin: 0 0 5px 0;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #b58900; /* Dorado oscuro para mejor contraste en texto */
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        .section-title {
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 8px;
+            color: var(--title-color);
+            margin-top: 40px;
+            display: inline-block;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skills-category {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border-top: 4px solid var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .skills-category h3 { margin-top: 0; color: var(--title-color); }
+        .project-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #f0e6e8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .project-title {
+            color: var(--title-color);
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        .tag {
+            background: var(--tag-bg);
+            color: #a8435b;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(214, 175, 55, 0.2);
+            transition: background 0.2s;
+        }
+        .btn:hover { 
+            background: #b58900; 
+        }
+        .links a {
+            color: #a8435b;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Valeria Valle Huansi</h1>
+            <p class="subtitle">Estudiante de Ingeniería de Software</p>
+            <div class="links">
+                <a href="https://github.com/Valerrria14" target="_blank">🔗 GitHub</a>
+                <a href="mailto:valeriav.dev@gmail.com">✉️ valeriav.dev@gmail.com</a>
+            </div>
+        </header>
+
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre Mí</h2>
+            <p>Estudiante de Ingeniería de Software enfocada en el desarrollo backend, diseño de arquitecturas lógicas eficientes y gestión de datos. Cuento con experiencia liderando proyectos bajo metodologías ágiles (Scrum) y construyendo soluciones web integrales con código limpio, alta cohesión y bases de datos relacionales.</p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Stack Tecnológico</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Lenguajes</h3>
+                    <p>Java, JavaScript, Python, HTML5, CSS3</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Bases de Datos (BD)</h3>
+                    <p>PostgreSQL, MySQL, SQL Server</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Gestión y DevOps</h3>
+                    <p>Git, GitHub, Scrum (Trello), Maven, Node.js / Express</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <!-- Proyecto 1: Clínica Médica Hemodiálisis -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Sistema de Gestión - Clínica Médica Hemodiálisis</h3>
+                    <div><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">Scrum</span></div>
+                </div>
+                <p><strong>Situación:</strong> Necesidad de digitalizar el flujo de registros de una clínica médica nueva orientada al adulto mayor, reduciendo el uso excesivo de papel y acelerando el acceso a la información.<br>
+                <strong>Acción:</strong> Diseñé e implementé la estructura del proyecto backend con Node.js/Express conectados a PostgreSQL. Desarrollé los roles de accesos diferenciados para recepcionistas, médicos y pacientes, gestionando todo el ciclo de desarrollo como Scrum Master y Product Owner mediante Sprints en Trello.<br>
+                <strong>Resultado:</strong> Una aplicación responsiva y de fácil usabilidad que optimiza la disponibilidad de datos clínicos con cero dependencias físicas.</p>
+                <a href="https://github.com/Valerrria14/Proyecto-prueba" class="btn" target="_blank">Ver Código en GitHub</a>
+            </div>
+
+            <!-- Proyecto 2: Sistema de Préstamos -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Sistema Automatizado de Gestión de Préstamos</h3>
+                    <div><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">SQL BD</span></div>
+                </div>
+                <p><strong>Situación:</strong> Necesidad de centralizar y automatizar el control de préstamos financieros, cálculos de intereses y verificación de transacciones seguras de forma estructurada.<br>
+                <strong>Acción:</strong> Desarrollé el núcleo del backend utilizando programación orientada a objetos en Java, gestionando las dependencias del ciclo de vida del software con Maven e implementando un módulo de validación seguro documentado en reportes internos de funciones.<br>
+                <strong>Resultado:</strong> Estructura modular escalable de alta cohesión y bajo acoplamiento que garantiza consistencia lógica en el flujo y control de capital simulado.</p>
+                <a href="https://github.com/Valerrria14/sistema-prestamos" class="btn" target="_blank">Ver Código en GitHub</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
